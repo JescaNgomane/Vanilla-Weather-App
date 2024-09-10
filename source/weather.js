@@ -3,8 +3,15 @@ function weatherDetails(response) {
   let temp = response.data.temperature.current;
   tempElement.innerHTML = Math.round(temp);
   let cityElement = document.querySelector("#weather-app-city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity-descrip");
+  let speedElement = document.querySelector("#wind-speed");
+  let speed = response.data.wind.speed;
+
   cityElement.innerHTML = response.data.city;
-  //console.log(response.data.temperature.current);
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  speedElement.innerHTML = `${Math.round(speed)}km/h`;
 }
 
 function searchcity(city) {
