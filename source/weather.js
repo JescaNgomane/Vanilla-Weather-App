@@ -14,14 +14,12 @@ function weatherDetails(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   speedElement.innerHTML = `${Math.round(speed)}km/h`;
-  timeElement.innerHTML = `${date.getDay()},${date.getHours()}:${date.getMinutes()}`;
-  console.log(response);
+  timeElement.innerHTML = dateFormat(date);
 }
-function dateFormat(day) {
-  let day = date.getDay();
+function dateFormat(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
-  let day = [
+  let weekDays = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -30,6 +28,12 @@ function dateFormat(day) {
     "Friday",
     "Saturday",
   ];
+  let day = weekDays[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchcity(city) {
