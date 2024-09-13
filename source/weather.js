@@ -6,12 +6,14 @@ function weatherDetails(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity-descrip");
   let speedElement = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
   let speed = response.data.wind.speed;
 
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   speedElement.innerHTML = `${Math.round(speed)}km/h`;
+  timeElementElement.innerHTML = "Friday, 17:55";
 }
 
 function searchcity(city) {
