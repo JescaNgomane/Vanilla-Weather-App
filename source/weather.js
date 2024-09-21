@@ -55,3 +55,15 @@ let searchFormElement = document.querySelector("#input-search");
 searchFormElement.addEventListener("submit", searchBar);
 
 searchcity("Soweto");
+
+let forecast = document.querySelector("#weather-forecast");
+forecast.innerHTML = ` <div class="weather-forecast-days">
+          <div class="weather-forecast-day">Tue</div>
+          <div class="weather-forecast-icon">☀️</div>
+          <div class="weather-forecast-temperatures">
+            <div class="weather-forecast-temperature">
+              <strong>15°</strong>
+            </div>
+            <div class="weather-forecast-temperature">9°</div>
+          </div>
+          </div>`;

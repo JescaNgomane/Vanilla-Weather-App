@@ -48,7 +48,7 @@ main {
 .city {
   margin: 0;
   font-size: 38px;
-  line-height: 48px;
+  line-height: 38px;
 }
 .weather-descrip {
   margin: 0;
@@ -75,4 +75,30 @@ main {
 .units {
   margin-top: 16px;
   font-size: 25px;
+}
+.weather-forecast-day {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 10px;
+}
+.weather-forecast-icon {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  font-size: 16px;
+  color: rgb(221, 59, 113);
+  display: flex;
+  justify-content: center;
+}
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
 }
