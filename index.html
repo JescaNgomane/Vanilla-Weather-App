@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=h1, initial-scale=1.0" />
     <link rel="stylesheet" href="source/style.css" />
-     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,12 @@
     <div class="container">
       <header>
         <form class="form" id="input-search">
-          <input type="text" placeholder="Enter a city..." class="form-input" id="input-search-form" />
+          <input
+            type="text"
+            placeholder="Enter a city..."
+            class="form-input"
+            id="input-search-form"
+          />
           <input type="submit" value="Search" class="form-search" />
         </form>
       </header>
@@ -25,20 +30,28 @@
         <h1 class="city" id="weather-app-city"></h1>
         <div class="weather-data">
           <div class="weather-descrip">
-            <span id="time"></span>, <span id="description"></span> 
+            <span id="time"></span>, <span id="description"></span>
             <br />
-           Humidity:<span class="readings" id="humidity-descrip"></span> ,Wind:
+            Humidity:<span class="readings" id="humidity-descrip"></span> ,Wind:
             <span class="readings" id="wind-speed"></span>
           </div>
           <div class="weather-app-details">
-    <div id="weather-icon">
-            <div >
-                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" class="emoji">
-            </div>
+            <div id="weather-icon">
+              <div>
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
+                  class="emoji"
+                />
+              </div>
             </div>
             <div class="temp-value" id="weather-app-temp"></div>
             <div class="units">°C</div>
-        
+          </div>
+        </div>
+        <div class="weather-forecast">
+          <div class="weather-forecast-day">Tue</div>
+          <div class="weather-forecast-icon"></div>
+          <div class="weather-forecast-temp">15°C 9°C</div>
         </div>
       </main>
       <footer>
