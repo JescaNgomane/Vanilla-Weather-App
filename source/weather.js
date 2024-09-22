@@ -51,14 +51,15 @@ function searchBar(event) {
   searchcity(searchInput.value);
 }
 
-let searchFormElement = document.querySelector("#input-search");
-searchFormElement.addEventListener("submit", searchBar);
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
 
-searchcity("Soweto");
-
-let forecast = document.querySelector("#weather-forecast");
-forecast.innerHTML = ` <div class="weather-forecast-days">
-          <div class="weather-forecast-day">Tue</div>
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` <div class="weather-forecast-days">
+          <div class="weather-forecast-day">${day}</div>
           <div class="weather-forecast-icon">☀️</div>
           <div class="weather-forecast-temperatures">
             <div class="weather-forecast-temperature">
@@ -67,3 +68,12 @@ forecast.innerHTML = ` <div class="weather-forecast-days">
             <div class="weather-forecast-temperature">9°</div>
           </div>
           </div>`;
+  });
+  let forecast = document.querySelector("#weather-forecast");
+  forecast.innerHTML = forecastHtml;
+}
+let searchFormElement = document.querySelector("#input-search");
+searchFormElement.addEventListener("submit", searchBar);
+
+searchcity("Soweto");
+displayForecast();
